@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>北京 8 天 7 夜學生旅程指南</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="主選單">
+        <a class="brand" href="#home">北京旅程指南</a>
+        <div class="nav-links">
+          <a href="#map">地圖</a>
+          <a href="#itinerary">旅遊行程</a>
+          <a href="#massage">按摩推薦</a>
+        </div>
+      </nav>
+      <section id="home" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">2026.6.29 - 7.6 | 5 人學生團</p>
+          <h1>北京 8 天 7 夜互動旅程網站</h1>
+          <p>
+            以 PPT 的行程為核心，從三里屯工體住宿出發，串起天壇、國博、動物園、長城、
+            故宮、798、古北水鎮與返程採買。地圖頁整合北京地鐵、道地美食與簡易路線計算。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#map">查看地圖</a>
+            <a class="button secondary" href="#itinerary">開始排行程</a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="map" class="section map-section">
+        <div class="section-heading">
+          <p class="eyebrow">第一個子頁面</p>
+          <h2>北京地鐵與美食地圖</h2>
+          <p>可縮放的北京地鐵圖，搭配旅程常用站點與道地美食目的地。</p>
+        </div>
+
+        <div class="map-layout">
+          <article class="panel route-panel">
+            <h3>地鐵美食計算機</h3>
+            <label for="startStation">入站點</label>
+            <input id="startStation" list="stationOptions" placeholder="例如：工人體育場、首都機場、天安門東" />
+            <label for="foodName">想去的美食名稱</label>
+            <input id="foodName" list="foodOptions" placeholder="例如：四季民福、南門涮肉、護國寺小吃" />
+            <button class="button primary full" id="routeButton">計算搭乘流程</button>
+            <div class="route-result" id="routeResult" aria-live="polite"></div>
+            <datalist id="stationOptions"></datalist>
+            <datalist id="foodOptions"></datalist>
+          </article>
+
+          <article class="map-card">
+            <div class="map-toolbar">
+              <button class="icon-btn" id="zoomIn" aria-label="放大">+</button>
+              <button class="icon-btn" id="zoomOut" aria-label="縮小">-</button>
+              <button class="icon-btn wide" id="zoomReset" aria-label="重設">重設</button>
+            </div>
+            <div class="map-viewport" id="mapViewport">
+              <div class="metro-map" id="metroMap" role="img" aria-label="北京地鐵完整線路總覽">
+                <img
+                  src="https://www.travelchinaguide.com/images/map/beijing/subway.jpg"
+                  alt="北京地鐵圖 2026"
+                  onerror="this.style.display='none'; document.querySelector('.map-fallback').style.display='grid';"
+                />
+                <div class="map-fallback" hidden>
+                  <strong>北京地鐵線路總覽</strong>
+                  <span>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19</span>
+                  <span>昌平線、亦莊線、房山線、燕房線、S1、首都機場線、大興機場線、西郊線、亦莊 T1</span>
+                </div>
+              </div>
+            </div>
+            <p class="source-note">
+              地鐵線路依 2026 北京地鐵資料整理；互動計算器聚焦本旅程與美食點，正式搭車前仍建議用高德地圖或億通行複核。
+            </p>
+          </article>
+        </div>
+
+        <div class="food-grid" id="foodGrid"></div>
+      </section>
+
+      <section id="itinerary" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">第二個子頁面</p>
+          <h2>旅遊行程視覺化</h2>
+          <p>以 PPT 的 8 天 7 夜行程為主軸，改成可互動的時間軸與卡片。</p>
+        </div>
+        <div class="day-tabs" id="dayTabs"></div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="section gallery-section" aria-label="旅程圖片">
+        <div class="section-heading compact">
+          <p class="eyebrow">視覺素材</p>
+          <h2>北京印象圖集</h2>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </section>
+
+      <section id="massage" class="section massage-section">
+        <div class="section-heading">
+          <p class="eyebrow">第三個子頁面</p>
+          <h2>按摩推薦</h2>
+          <p>安排在長時間步行、長城與故宮日後，優先考慮離工體與三里屯近、交通簡單的店型。</p>
+        </div>
+        <div class="massage-grid" id="massageGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>資料來源：使用者提供的北京 HTML、北京 8 天 7 夜學生行程 PPT、2026 北京地鐵公開資訊。公開上線前仍建議再核對票價、預約時間與營業狀態。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
