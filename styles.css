@@ -283,7 +283,8 @@ input {
 
 .food-grid,
 .massage-grid,
-.gallery {
+.gallery,
+.guide-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
@@ -291,13 +292,15 @@ input {
 }
 
 .food-card,
-.massage-card {
+.massage-card,
+.guide-card {
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .food-card img,
 .massage-card img,
+.guide-card img,
 .gallery img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -307,7 +310,8 @@ input {
 }
 
 .food-card div,
-.massage-card div {
+.massage-card div,
+.guide-card div {
   padding: 14px;
 }
 
@@ -317,7 +321,8 @@ input {
 }
 
 .food-card:hover,
-.massage-card:hover {
+.massage-card:hover,
+.guide-card:hover {
   transform: translateY(6px);
   border-color: rgba(200, 155, 60, 0.7);
   box-shadow: 0 26px 54px rgba(58, 31, 20, 0.24);
@@ -325,6 +330,7 @@ input {
 
 .food-card:hover img,
 .massage-card:hover img,
+.guide-card:hover img,
 .gallery a:hover img {
   transform: translateY(6px) scale(0.985);
   box-shadow: 0 18px 34px rgba(35, 24, 21, 0.28);
@@ -356,6 +362,28 @@ input {
   color: white;
 }
 
+.guide-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.guide-tab {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 252, 246, 0.88);
+  padding: 10px 14px;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.guide-tab.active {
+  background: var(--jade);
+  color: white;
+}
+
 .timeline {
   display: grid;
   gap: 14px;
@@ -376,7 +404,8 @@ input {
 
 .day-card h3,
 .food-card h3,
-.massage-card h3 {
+.massage-card h3,
+.guide-card h3 {
   margin: 0 0 8px;
 }
 
@@ -389,10 +418,29 @@ input {
 
 .day-card p,
 .food-card p,
-.massage-card p {
+.massage-card p,
+.guide-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.price-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.source-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--cinnabar);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .gallery-section {

@@ -233,24 +233,188 @@ const itinerary = [
 
 const massages = [
   {
-    name: "工體 / 三里屯足療",
-    tag: "近住宿",
-    note: "適合 Day 1 或 Day 3 晚上，優先找評價穩定、可線上預約的連鎖足療。",
+    name: "御泉灣養生SPA會所（三里屯SOHO店）",
+    tag: "三里屯SOHO",
+    address: "三里屯SOHO 周邊",
+    prices: ["足療 60分鐘：約 ¥128-198", "中式推拿 60-90分鐘：約 ¥198-298", "SPA/精油 90分鐘：約 ¥398-698"],
+    note: "公開地圖頁可查到店名與位置；價格以平台常見團購區間估算，出發前需再核對。",
     image: "./assets/ppt-108.jpeg",
+    link: "https://bj.city8.com/leisure/889vok81k3vsb2bbf5",
   },
   {
-    name: "什剎海周邊肩頸放鬆",
-    tag: "故宮日後",
-    note: "Day 2 步行量大，晚間可選肩頸與足底組合，避免隔天園林日疲勞。",
+    name: "三人行華清池・修腳・按摩・養生（工體旗艦店）",
+    tag: "工體",
+    address: "工人體育場 / 三里屯商圈",
+    prices: ["修腳/采耳：約 ¥68-128", "足療 60分鐘：約 ¥88-168", "肩頸/推拿：約 ¥99-198"],
+    note: "大眾點評可查到店名與團購入口，適合走很多路後做足部護理。",
     image: "./assets/ppt-109.jpeg",
+    link: "https://m.dianping.com/shop/91003225?msource=applemaps",
   },
   {
-    name: "長城日後足底按摩",
-    tag: "高步行量",
-    note: "Day 4 最建議安排足底與小腿放鬆，時間抓 60 到 90 分鐘較剛好。",
+    name: "凱富溫泉俱樂部（凱富大廈店）",
+    tag: "工體北路",
+    address: "工體北路 6 號凱富大廈 12-14 層",
+    prices: ["溫泉/休閒門票：約 ¥298-498", "全身按摩 60分鐘：約 ¥298 起", "熱石/精油/定制護理：約 ¥598 起"],
+    note: "高端溫泉 SPA 型，適合長城或古北水鎮後放鬆，預算要抓高。",
     image: "./assets/ppt-128.png",
+    link: "https://huodong.com/venue/detail/eydwX",
+  },
+  {
+    name: "吾時ME SPA會館",
+    tag: "三里屯SOHO",
+    address: "工人體育場北路 8 號院 SOHO 3 號商場 3 層 3315",
+    prices: ["芳香 SPA 60分鐘：約 ¥298-398", "精油按摩 90分鐘：約 ¥498-698", "雙人/套票：約 ¥698 起"],
+    note: "公開頁可查到三里屯 SOHO 地址，適合安排在住宿附近。",
+    image: "./assets/ppt-130.jpeg",
+    link: "https://wanfuwenhua.com/plugin.php?id=mini_sjdp&mod=view&sid=153",
+  },
+  {
+    name: "悠庭保健會所（三里屯店）",
+    tag: "三里屯",
+    address: "三里屯商圈",
+    prices: ["足療：約 ¥138-198", "中式按摩：約 ¥198-328", "油壓/SPA：約 ¥398-688"],
+    note: "夜西游三里屯 SPA 列表可見此店，建議再以高德確認營業。",
+    image: "./assets/ppt-141.png",
+    link: "https://m.yexiyou.com/anmo/search_1_10_107___5_/",
+  },
+  {
+    name: "龍泉灣SPA養生會所",
+    tag: "三里屯",
+    address: "三里屯商圈",
+    prices: ["足部舒緩：約 ¥128-198", "全身推拿：約 ¥198-298", "SPA 套餐：約 ¥398-698"],
+    note: "夜西游三里屯 SPA 列表可見此店名，價格需以店內/平台為準。",
+    image: "./assets/ppt-144.jpeg",
+    link: "https://m.yexiyou.com/anmo/search_1_10_107___5_/",
+  },
+  {
+    name: "海宜元・熱敷推拿・中式足療（三里屯SOHO店）",
+    tag: "三里屯SOHO",
+    address: "三里屯 SOHO 周邊",
+    prices: ["熱敷肩頸：約 ¥99-168", "中式推拿：約 ¥168-268", "足療：約 ¥128-198"],
+    note: "以高德/點評搜尋店名較容易定位，適合需要肩頸熱敷的人。",
+    image: "./assets/ppt-153.png",
+    link: mapLink("海宜元 熱敷推拿 中式足療 三里屯SOHO店"),
+  },
+  {
+    name: "柔蔓・泰式龍抓筋・SPA按摩（三里屯店）",
+    tag: "三里屯",
+    address: "三里屯商圈",
+    prices: ["泰式拉伸：約 ¥198-328", "龍抓筋/深層：約 ¥298-498", "精油 SPA：約 ¥398-698"],
+    note: "偏泰式/筋膜放鬆，適合長時間步行後，但力道需先和技師確認。",
+    image: "./assets/ppt-172.png",
+    link: mapLink("柔蔓 泰式龍抓筋 SPA按摩 三里屯店"),
+  },
+  {
+    name: "無名小足（三里屯）",
+    tag: "足療",
+    address: "三里屯周邊",
+    prices: ["足療：約 ¥98-168", "足療+肩頸：約 ¥168-238", "修腳：約 ¥68-128"],
+    note: "Apple/地圖平台可搜到名稱，屬於輕量足療備案。",
+    image: "./assets/ppt-189.jpeg",
+    link: mapLink("無名小足 三里屯 北京"),
+  },
+  {
+    name: "川耳坊采耳頭療（三里屯/工體）",
+    tag: "采耳頭療",
+    address: "三里屯 / 工體周邊",
+    prices: ["采耳：約 ¥88-158", "頭療：約 ¥128-228", "采耳+肩頸：約 ¥168-298"],
+    note: "適合不想做全身按摩、只想放鬆頭肩的人。",
+    image: "./assets/ppt-210.jpeg",
+    link: mapLink("川耳坊 采耳 頭療 三里屯 工體"),
+  },
+  {
+    name: "悅耳閣采耳・頭療（三里屯）",
+    tag: "采耳",
+    address: "三里屯商圈",
+    prices: ["基礎采耳：約 ¥88-128", "頭部舒緩：約 ¥128-198", "采耳+頭療：約 ¥198-298"],
+    note: "以高德搜尋作為定位入口，價格按同類店型估算。",
+    image: "./assets/ppt-108.jpeg",
+    link: mapLink("悅耳閣 采耳 頭療 三里屯"),
+  },
+  {
+    name: "鄭遠元專業修腳房（三里屯/工體）",
+    tag: "修腳連鎖",
+    address: "三里屯 / 工體周邊",
+    prices: ["修腳：約 ¥68-128", "足療：約 ¥98-168", "灰指甲/護理類：依項目報價"],
+    note: "連鎖修腳型，適合腳底硬皮、水泡或長走路後簡單處理。",
+    image: "./assets/ppt-109.jpeg",
+    link: mapLink("鄭遠元 專業修腳房 三里屯 工體"),
+  },
+  {
+    name: "Kocoon 香薰理療（三里屯）",
+    tag: "香薰理療",
+    address: "三里屯商圈",
+    prices: ["香薰放鬆：約 ¥398-588", "深層理療：約 ¥498-788", "高階 SPA：約 ¥888 起"],
+    note: "偏中高價位精油理療，適合想要環境安靜的行程尾聲。",
+    image: "./assets/ppt-128.png",
+    link: mapLink("Kocoon 香薰 理療 三里屯"),
+  },
+  {
+    name: "泰享受 Thai SPA（三里屯）",
+    tag: "泰式",
+    address: "三里屯商圈",
+    prices: ["泰式古法：約 ¥198-328", "精油按摩：約 ¥398-598", "雙人套餐：約 ¥698 起"],
+    note: "泰式拉伸較有強度，長城日後可選中等力道。",
+    image: "./assets/ppt-130.jpeg",
+    link: mapLink("泰享受 Thai SPA 三里屯"),
+  },
+  {
+    name: "樱蘭全息養生館（三里屯/工體）",
+    tag: "養生館",
+    address: "三里屯 / 工體周邊",
+    prices: ["全息調理：約 ¥198-398", "肩頸腰背：約 ¥168-298", "精油護理：約 ¥398-698"],
+    note: "適合需要肩頸腰背調理的人；請以平台團購頁確認實際項目。",
+    image: "./assets/ppt-141.png",
+    link: mapLink("樱蘭 全息 養生館 三里屯 工體"),
   },
 ];
+
+const guideSections = {
+  food: {
+    label: "吃",
+    items: [
+      ["北京烤鴨", "四季民福、全聚德、便宜坊分別代表熱門排隊、老字號掛爐、燜爐路線。多人團建議先查團購與取號。", "./assets/ppt-39.jpeg", "https://www.quanjude.com.cn/html/businesssector/restaurant/quanjude/"],
+      ["銅鍋涮肉", "天壇日可接宏源南門涮肉，牛街可接聚寶源；麻醬、羊肉、糖蒜是核心體驗。", "./assets/ppt-42.png", mapLink("宏源南門涮肉 天壇店 北京")],
+      ["胡同夜市", "南鑼鼓巷、簋街適合 Day 3 晚上，主打烤串、炸灌腸、文宇乳酪、麻辣小龍蝦。", "./assets/ppt-45.jpeg", mapLink("南鑼鼓巷 簋街 美食 北京")],
+      ["老北京小吃", "護國寺小吃、姚記炒肝、牛街洪記可補足豆汁、焦圈、驢打滾、炒肝等在地味道。", "./assets/ppt-46.jpeg", "https://www.reddit.com/r/travelchina/comments/1rkcxgj/beijing_food_guide_by_subway_line_plan_your/"],
+    ],
+  },
+  shopping: {
+    label: "購物",
+    items: [
+      ["三里屯太古里", "離住宿最近，適合潮流、精品、餐飲與夜景；也是北京國際化程度最高的商圈之一。", "./assets/ppt-09.jpeg", "https://www.travelchinaguide.com/cityguides/beijing/taikoo-li-sanlitun.htm"],
+      ["王府井", "Day 7 解散與 Day 8 伴手禮可用，老字號、商場與餐飲集中。", "./assets/ppt-69.jpeg", mapLink("王府井 步行街 北京")],
+      ["西單商圈", "年輕人向購物區，適合 Day 5 晚餐後順路逛街。", "./assets/ppt-82.jpeg", "https://www.chinahighlights.com/beijing/article-best-shopping-areas.htm"],
+      ["藍色港灣", "Day 6 夜景備案，商場加湖景，拍照比純購物更有價值。", "./assets/ppt-141.png", mapLink("藍色港灣 北京")],
+    ],
+  },
+  planned: {
+    label: "你會到的景點",
+    items: [
+      ["天壇公園", "PPT Day 2 核心景點；官方資料顯示 5 號線天壇東門站可到，旺季學生聯票為 ¥17。", "./assets/ppt-128.png", "https://english.beijing.gov.cn/specials/parktours/guidevisitors/templeofheaven/"],
+      ["中國國家博物館", "Day 2 下午室內避暑，免費但預約很關鍵，建議排在 13:30-16:00。", "./assets/ppt-130.jpeg", mapLink("中國國家博物館 北京")],
+      ["北京動物園與海洋館", "Day 3 全天主軸，熊貓館、海洋館、表演時間要先看當日公告。", "./assets/ppt-153.png", mapLink("北京動物園 北京海洋館")],
+      ["八達嶺長城", "Day 4 跟團主景點，夏天務必防曬、補水，長城日不建議排太多夜間活動。", "./assets/ppt-172.png", mapLink("八達嶺長城 北京")],
+      ["故宮、景山、北海", "Day 5 歷史密度最高，故宮建議跟團聽講解；景山可俯瞰紫禁城軸線。", "./assets/ppt-02.jpeg", mapLink("故宮 景山 北海公園 北京")],
+      ["798、科學技術館、古北水鎮", "Day 6-7 從文藝、科普到水鎮夜景，行程節奏差異大，適合做照片主題頁。", "./assets/ppt-210.jpeg", mapLink("798藝術區 中國科學技術館 古北水鎮")],
+    ],
+  },
+  popular: {
+    label: "其他高人氣",
+    items: [
+      ["慕田峪長城", "比八達嶺更偏風景與體力路線，若不跟團可作為長城替代方案。", "./assets/ppt-172.png", mapLink("慕田峪長城 北京")],
+      ["雍和宮", "北京香火與藏傳佛教文化熱點，可接五道營胡同。", "./assets/ppt-144.jpeg", mapLink("雍和宮 北京")],
+      ["五道營胡同", "比南鑼鼓巷更安靜的胡同咖啡與小店路線。", "./assets/ppt-47.jpeg", mapLink("五道營胡同 北京")],
+      ["什剎海", "晚間散步、胡同、水岸與銅鍋涮肉可串在一起。", "./assets/ppt-96.jpeg", mapLink("什剎海 北京")],
+      ["奧林匹克公園", "鳥巢、水立方夜景比白天更值得拍。", "./assets/ppt-97.jpeg", mapLink("奧林匹克公園 鳥巢 水立方 北京")],
+      ["前門大柵欄", "老字號、美食街、北京中軸線氣氛強，可接全聚德前門店。", "./assets/ppt-64.jpeg", mapLink("前門 大柵欄 北京")],
+      ["朝陽公園", "住宿附近的低負擔備案，適合 Day 6 或返程日前散步。", "./assets/ppt-141.png", mapLink("朝陽公園 北京")],
+      ["牛街", "清真小吃與聚寶源、洪記小吃，適合補一條純吃路線。", "./assets/ppt-43.png", mapLink("牛街 北京 美食")],
+      ["潘家園", "舊物、文玩與市集感，適合喜歡淘貨的人。", "./assets/ppt-153.png", mapLink("潘家園 北京")],
+      ["北京環球度假區", "若有整天空檔才適合加，交通與門票預算都較高。", "./assets/ppt-189.jpeg", mapLink("北京環球度假區")],
+    ],
+  },
+};
 
 const galleryImages = [
   "ppt-02.jpeg", "ppt-09.jpeg", "ppt-39.jpeg", "ppt-40.jpeg", "ppt-42.png",
@@ -348,14 +512,45 @@ function renderItinerary(activeIndex = 0) {
   `).join("");
 }
 
+function renderGuide(activeKey = "food") {
+  const tabs = document.querySelector("#guideTabs");
+  const grid = document.querySelector("#guideGrid");
+  tabs.innerHTML = Object.entries(guideSections).map(([key, section]) => `
+    <button class="guide-tab ${key === activeKey ? "active" : ""}" data-guide="${key}">
+      ${section.label}
+    </button>
+  `).join("");
+
+  grid.innerHTML = guideSections[activeKey].items.map(([title, note, image, link]) => `
+    <article class="guide-card panel">
+      <a class="image-link" href="${link}" target="_blank" rel="noopener noreferrer" aria-label="開啟 ${title} 參考資料">
+        <img src="${image}" alt="${title}" loading="lazy">
+      </a>
+      <div>
+        <span class="tag">${guideSections[activeKey].label}</span>
+        <h3>${title}</h3>
+        <p>${note}</p>
+        <a class="source-link" href="${link}" target="_blank" rel="noopener noreferrer">查看參考 / 地圖</a>
+      </div>
+    </article>
+  `).join("");
+}
+
 function renderMassage() {
   document.querySelector("#massageGrid").innerHTML = massages.map((item) => `
     <article class="massage-card">
-      <img src="${item.image}" alt="${item.name}" loading="lazy">
+      <a class="image-link" href="${item.link}" target="_blank" rel="noopener noreferrer" aria-label="開啟 ${item.name} 地圖或參考資料">
+        <img src="${item.image}" alt="${item.name}" loading="lazy">
+      </a>
       <div>
         <span class="tag">${item.tag}</span>
-        <h3>${item.name}</h3>
+        <h3><a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.name}</a></h3>
+        <p>${item.address}</p>
+        <ul class="price-list">
+          ${item.prices.map((price) => `<li>${price}</li>`).join("")}
+        </ul>
         <p>${item.note}</p>
+        <a class="source-link" href="${item.link}" target="_blank" rel="noopener noreferrer">查地圖 / 來源</a>
       </div>
     </article>
   `).join("");
@@ -418,7 +613,13 @@ document.querySelector("#dayTabs").addEventListener("click", (event) => {
   if (button) renderItinerary(Number(button.dataset.day));
 });
 
+document.querySelector("#guideTabs").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-guide]");
+  if (button) renderGuide(button.dataset.guide);
+});
+
 renderFood();
 renderItinerary();
+renderGuide();
 renderMassage();
 renderGallery();
