@@ -26,78 +26,133 @@ const stations = {
   "東直門": { lines: ["2", "13", "首都機場線"], name: "東直門" },
   "鼓樓大街": { lines: ["2", "8"], name: "鼓樓大街" },
   "平安里": { lines: ["4", "6", "19"], name: "平安里" },
+  "燈市口": { lines: ["5"], name: "燈市口" },
+  "東單": { lines: ["1", "5"], name: "東單" },
+  "和平門": { lines: ["2"], name: "和平門" },
+  "崇文門": { lines: ["2", "5"], name: "崇文門" },
 };
+
+function mapLink(query) {
+  return `https://www.amap.com/search?query=${encodeURIComponent(query)}`;
+}
 
 const foods = [
   {
-    name: "四季民福",
+    name: "四季民福（王府井燈市口店）",
     type: "北京烤鴨",
-    station: "王府井",
+    station: "燈市口",
+    address: "王府井 / 燈市口商圈",
     note: "適合排進 Day 1 晚餐，熱門時段排隊很長，建議提早取號。",
     image: "./assets/ppt-39.jpeg",
+    link: "https://maps.apple.com/place?auid=1117160141800961&lsp=57879",
   },
   {
-    name: "大董烤鴨",
+    name: "大董烤鴨（工體店）",
     type: "精緻烤鴨",
     station: "工人體育場",
+    address: "工人體育場東路 17 號一帶",
     note: "離三里屯與工體動線近，適合抵達日或自由晚餐。",
     image: "./assets/ppt-40.jpeg",
+    link: mapLink("大董烤鴨 工人體育場東路17號 北京"),
   },
   {
-    name: "便宜坊",
+    name: "便宜坊（鮮魚口店）",
     type: "燜爐烤鴨",
-    station: "王府井",
+    station: "前門",
+    address: "前門鮮魚口老字號餐飲街",
     note: "歷史派烤鴨，可作為四季民福客滿時的備案。",
     image: "./assets/ppt-64.jpeg",
+    link: "https://us.trip.com/restaurant/china/beijing/detail/Bianyifang%20Restaurant-11097909/",
   },
   {
-    name: "南門涮肉",
+    name: "宏源南門涮肉（天壇店）",
     type: "銅鍋涮肉",
-    station: "什剎海",
+    station: "天壇東門",
+    address: "永內東街東里 13 號樓 1-2 號",
     note: "適合故宮、景山、什剎海同日安排，麻醬與羊肉是重點。",
     image: "./assets/ppt-42.png",
+    link: "https://bj.city8.com/cater/88903v81iv5bbd4034",
   },
   {
-    name: "聚寶源",
+    name: "聚寶源（牛街店）",
     type: "牛街老字號",
     station: "牛街",
+    address: "牛街清真美食聚集區",
     note: "排隊名店，適合想體驗老北京清真銅鍋涮肉。",
     image: "./assets/ppt-43.png",
+    link: mapLink("聚寶源 牛街店 北京"),
   },
   {
-    name: "護國寺小吃",
+    name: "護國寺小吃（護國寺總店）",
     type: "經典小吃",
     station: "平安里",
+    address: "西城區護國寺大街 93 號一帶",
     note: "豆汁、焦圈、驢打滾、豌豆黃，適合當北京味覺採樣。",
     image: "./assets/ppt-44.jpeg",
+    link: "https://s.visitbeijing.com.cn/food/68",
   },
   {
-    name: "胡大飯館",
+    name: "胡大飯館（簋街總店）",
     type: "簋街小龍蝦",
     station: "東直門",
+    address: "簋街 / 東直門一帶",
     note: "夜間氣氛強，適合行程結束後加碼宵夜。",
     image: "./assets/ppt-45.jpeg",
+    link: mapLink("胡大飯館 簋街總店 北京"),
   },
   {
-    name: "姚記炒肝",
+    name: "姚記炒肝（鼓樓店）",
     type: "老北京早餐",
     station: "鼓樓大街",
+    address: "東城區鼓樓東大街 311 號",
     note: "可以接什剎海、鼓樓一帶散步，但口味較重。",
     image: "./assets/ppt-46.jpeg",
+    link: "https://www.amap.com/place/B000A74A8C",
   },
   {
-    name: "全聚德",
+    name: "全聚德（前門店）",
     type: "百年烤鴨",
     station: "前門",
+    address: "前門大街 30 號一帶",
     note: "PPT 指定 Day 5 午餐，適合接故宮、景山、北海動線。",
     image: "./assets/ppt-64.jpeg",
+    link: "https://www.quanjude.com.cn/html/businesssector/restaurant/quanjude/",
   },
   {
-    name: "第六季自助",
+    name: "全聚德（王府井店）",
+    type: "百年烤鴨",
+    station: "王府井",
+    address: "王府井商圈",
+    note: "適合 Day 7 王府井解散後，作為第六季自助以外的烤鴨備案。",
+    image: "./assets/ppt-69.jpeg",
+    link: mapLink("全聚德 王府井店 北京"),
+  },
+  {
+    name: "全聚德（和平門店）",
+    type: "百年烤鴨",
+    station: "和平門",
+    address: "和平門 / 宣武門一帶",
+    note: "大型老字號分店，適合多人團體，建議先查詢包間與團購。",
+    image: "./assets/ppt-82.jpeg",
+    link: mapLink("全聚德 和平門店 北京"),
+  },
+  {
+    name: "四季民福（故宮店）",
+    type: "北京烤鴨",
+    station: "天安門東",
+    address: "故宮 / 景山周邊",
+    note: "適合故宮日備案，但熱門時段排隊壓力通常更高。",
+    image: "./assets/ppt-97.jpeg",
+    link: mapLink("四季民福 故宮店 北京"),
+  },
+  {
+    name: "第六季自助（王府井店）",
     type: "海鮮自助",
     station: "王府井",
+    address: "王府井商圈",
     note: "PPT 指定 Day 7 晚餐，古北水鎮回城後可安排。",
     image: "./assets/ppt-189.jpeg",
+    link: "https://tw.trip.com/restaurant/china/beijing/detail/diliujizizhu-restaurant-wangfujingdian-56539486/",
   },
 ];
 
@@ -213,7 +268,7 @@ function closestStation(input) {
 
 function findFood(input) {
   const text = input.trim().toLowerCase();
-  return foods.find((food) => food.name.toLowerCase().includes(text) || text.includes(food.name.toLowerCase()));
+  return foods.find((food) => food.name.toLowerCase().includes(text) || text.includes(food.name.toLowerCase().replace(/（.*?）/g, "")));
 }
 
 function routeText(start, targetStation) {
@@ -253,10 +308,13 @@ function renderFood() {
   const grid = document.querySelector("#foodGrid");
   grid.innerHTML = foods.map((food) => `
     <article class="food-card">
-      <img src="${food.image}" alt="${food.name}" loading="lazy">
+      <a class="image-link" href="${food.link}" target="_blank" rel="noopener noreferrer" aria-label="開啟 ${food.name} 分店地圖">
+        <img src="${food.image}" alt="${food.name}" loading="lazy">
+      </a>
       <div>
         <span class="tag">${food.type}</span>
-        <h3>${food.name}</h3>
+        <h3><a href="${food.link}" target="_blank" rel="noopener noreferrer">${food.name}</a></h3>
+        <p>${food.address}｜最近站：${food.station}</p>
         <p>${food.note}</p>
       </div>
     </article>
@@ -305,7 +363,9 @@ function renderMassage() {
 
 function renderGallery() {
   document.querySelector("#gallery").innerHTML = galleryImages.map((query, index) => `
-    <img src="./assets/${query}" alt="北京旅程圖片 ${index + 1}" loading="lazy">
+    <a href="./assets/${query}" target="_blank" rel="noopener noreferrer">
+      <img src="./assets/${query}" alt="北京旅程圖片 ${index + 1}" loading="lazy">
+    </a>
   `).join("");
 }
 
